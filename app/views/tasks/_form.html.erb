@@ -1,27 +1,4 @@
-<%= form_with(model: task) do |form| %>
-  <% if task.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
-
-      <ul>
-        <% task.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :solved, style: "display: block" %>
-    <%= form.check_box :solved %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+<%= form_with(model: task, id: 'input') do | form | %>
+  <%= form.text_field :name, class: 'form-control', required: true %>
+  <%= form.button :submit, class: 'submit-btn' %>
 <% end %>

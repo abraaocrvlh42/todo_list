@@ -1,14 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Tasks</h1>
-
 <div id="tasks">
-  <% @tasks.each do |task| %>
-    <%= render task %>
-    <p>
-      <%= link_to "Show this task", task %>
-    </p>
-  <% end %>
-</div>
+  <header>
+    <h2 id="date"> <%= l Date.today %> </h2>
+    <p id="task-count"> <%= @tasks.count %> Tasks </p>
+    <%= render 'form', task: Task.new%>
+  </header>
 
-<%= link_to "New task", new_task_path %>
+  <div id="list">
+    <% @tasks.each do |task| %>
+      <%= render task %>
+    <% end %>
+  </div
+</div>

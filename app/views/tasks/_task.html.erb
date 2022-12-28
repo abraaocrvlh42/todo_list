@@ -1,12 +1,13 @@
-<div id="<%= dom_id task %>">
-  <p>
-    <strong>Name:</strong>
-    <%= task.name %>
-  </p>
-
-  <p>
-    <strong>Solved:</strong>
-    <%= task.solved %>
-  </p>
-
+<div class="cards <%= 'resolved' if task.solved%>" >
+  <%= button_to '', task, method: :patch, class: "fas fa-check btn resolved-btn #{'active' if task.solved}" %>
+    <div class="cards-info">
+      <h3 class="task">
+        <%= task.name %>
+      </h3>
+        
+      <p class="time">
+        <%= l task.created_at, format: :custom %>
+      </p>
+    </div>
+  <%= button_to '', task, method: :delete, class: 'fas fa-times btn delete-btn' %>
 </div>
