@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: todo_list_development
+  database: todo_list
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
