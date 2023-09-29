@@ -1,8 +1,7 @@
 # Todo List
 
-![todo_list] ('./public/todo_list.png')
 
-* Ruby version: 3.0.2
+* Ruby version: 3.1.3
 
 * System dependencies
 
