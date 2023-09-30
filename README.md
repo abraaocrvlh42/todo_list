@@ -1,9 +1,8 @@
 # Todo List
 
-
 * Ruby version: 3.1.3
 
-* System dependencies
+* Run `bundle` that it will install all the necessary dependencies
 
 * Configuration
 
